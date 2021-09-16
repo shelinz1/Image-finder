@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.APP {
+    padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navHover:hover {
+    background-color: rgb(245, 183, 14);
+    transition-property: background;
+    transition-duration: 1s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.heading {
+    color: #e0ae0afd;
 }
 
-.App-link {
-  color: #61dafb;
+
+/* .col>img {
+    display: flex;
+} */
+
+.search-content {
+    padding-top: 3em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+small {
+    color: rgb(218, 217, 213);
+}
+
+.spinner {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.searchArea {
+    background-image: url('./components/background/sunset.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.paginationContainer {
+    list-style-type: none;
+    font-size: 10px;
+}
+
+.paginationContainer a {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(106, 159, 202);
+    cursor: pointer;
+}
+
+.paginationContainer a:hover {
+    background-color: lightslategray;
+}
+
+.activeBtn a {
+    background-color: rgba(0, 0, 0, 0.712);
 }
