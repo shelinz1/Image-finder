@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: cursive;
 }
 
 .APP {
@@ -18,11 +17,6 @@
 .heading {
     color: #e0ae0afd;
 }
-
-
-/* .col>img {
-    display: flex;
-} */
 
 .search-content {
     padding-top: 3em;
@@ -45,13 +39,13 @@ small {
 
 .paginationContainer {
     list-style-type: none;
-    font-size: 10px;
+    font-size: 5px;
 }
 
 .paginationContainer a {
     padding: 10px;
     margin: 5px;
-    border-radius: 5px;
+    border-radius: 3px;
     border: 1px solid rgb(106, 159, 202);
     cursor: pointer;
 }
