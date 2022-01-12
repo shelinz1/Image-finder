@@ -1,11 +1,10 @@
-
 import React, { Component } from 'react'
 import axios from 'axios'
 import { GridList, GridTile } from 'material-ui/GridList'
 import IconButton from 'material-ui/IconButton'
 import ZoomIn from 'material-ui/svg-icons/action/zoom-in'
 import { FcPrevious } from 'react-icons/fc'
-import {FcNext} from 'react-icons/fc'
+import { FcNext } from 'react-icons/fc'
 import ReactPaginate from 'react-paginate'
 import Images from './Images'
 import DefaultImages from './DefaultImages'
@@ -22,7 +21,7 @@ class search extends Component {
     images: [],
 
     open: false,
-    currentImage: ''
+    currentImage: '',
   }
 
   handleOPen = (img) => {
@@ -32,7 +31,6 @@ class search extends Component {
   handleClose = () => {
     this.setState({ open: false })
   }
-
 
   onTextChange = (e) => {
     this.setState({ text: e.target.value }, () => {
@@ -105,10 +103,9 @@ class search extends Component {
       this.setState({ pageNumber: selected })
     }
 
-
     const actions = [
       <FlatButton label="Close" secondary={true} onClick={this.handleClose} />,
-    ];
+    ]
 
     const dialog = (
       <Dialog
@@ -153,13 +150,15 @@ class search extends Component {
         {this.state.images.length > 0 ? (
           <div>
             <Images images={imageList} />
-             {dialog}
+            {dialog}
             <ReactPaginate
-              previousLabel={<FcPrevious/>}
-              nextLabel={<FcNext/>}
+              previousLabel={<FcPrevious />}
+              nextLabel={<FcNext />}
               pageCount={pageCount}
               onPageChange={changePage}
-              containerClassName={'paginationContainer  mt-4 d-flex justify-content-center container p-3'}
+              containerClassName={
+                'paginationContainer  mt-4 d-flex justify-content-center container p-3'
+              }
               previousClassName={'previousBtn'}
               nextClassName={'nextBtn'}
               disabledClassName={'disabledBtn'}
@@ -167,19 +166,15 @@ class search extends Component {
             />
           </div>
         ) : (
-            <div>
-              <DefaultImages />
-            </div>
+          <div>
+            <DefaultImages />
+          </div>
         )}
       </>
     )
   }
 }
 
-// const searchBackground = {
-//   backgroundImage: `url(${background})`,
-//   backgroundSize: '100%',
-//   backgroundRepeat: 'no-repeat',
-// }
+
 
 export default search
